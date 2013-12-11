@@ -50,6 +50,4 @@ Sayıları İnsanların Okuyabileceği Hale Getirir
 31 Milyon
 871 Bin
 488
->>> 
-
 ```

@@ -4,17 +4,17 @@ Created on Wed Dec 11 19:26:09 2013
 
 @author: ahmed
 """
+from nums import data
 
 def humanizer(NUM):
     NUM = ''.join(reversed(str(NUM)))
     TEXT = u''
-    n = [ 3*m for m in range( 3 ) ]
-    basamaklar = ['','Bin','Milyon', 'Milyar', 'Trilyon']
+    n = [ 3*m for m in range( 5 ) ]
 
     # ''.join ( reversed ( <STRING> ) )
 
     HUU = []
-    for i in zip(n,basamaklar):
+    for i in data:
         p = NUM[ i[0]:i[0]+3 ][ ::-1 ].lstrip( '0' )
         if len(p) is 0:
             continue
@@ -27,4 +27,5 @@ def humanizer(NUM):
     return HUU
 
 if __name__ == '__main__':
-    print humanizer(3000)
+
+    print humanizer(3000000000000000)

@@ -6,26 +6,31 @@ Created on Wed Dec 11 19:26:09 2013
 """
 from nums import data
 
+def randomizer(pow):
+    from random import random
+    return long(10**t + (10**t) * random())
+
+def prettizer( humandata ):
+    for item in humandata:
+        print item
 def humanizer(NUM):
     NUM = ''.join(reversed(str(NUM)))
     TEXT = u''
     n = [ 3*m for m in range( 5 ) ]
 
-    # ''.join ( reversed ( <STRING> ) )
-
     HUU = []
-    for i in data:
-        p = NUM[ i[0]:i[0]+3 ][ ::-1 ].lstrip( '0' )
+    for i in data[:len(NUM)/3 + 1]:
+        p = NUM[ i[0]:i[0] + i[2] ][ ::-1 ].lstrip( '0' ) ## BUG NOT i+3,
         if len(p) is 0:
             continue
+        elif p is '1' and i[1] == 'Bin':
+            p = 'Bin'
         else:
-            if p is '1' and i[1] is 'Bin':
-                p = 'Bin'
-            else:
-                p = (p +  ' ' + i[1]).strip()
+            p = (p +  ' ' + i[1]).strip()
         HUU.insert(0, p.strip() )
     return HUU
 
 if __name__ == '__main__':
 
-    print humanizer(3000000000000000)
+    for t in range(1,10):
+        print humanizer(randomizer(t))

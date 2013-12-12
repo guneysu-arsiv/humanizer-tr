@@ -8,11 +8,13 @@ from nums import data
 
 def randomizer(pow):
     from random import random
-    return long(10**t + (10**t) * random())
+    return long(10**pow + (10**pow) * random())
 
 def prettizer( humandata ):
     for item in humandata:
-        print item
+        t += item
+    return t
+
 def humanizer(NUM):
     NUM = ''.join(reversed(str(NUM)))
     TEXT = u''

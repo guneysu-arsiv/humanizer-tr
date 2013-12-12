@@ -11,8 +11,9 @@ def randomizer(pow):
     return long(10**pow + (10**pow) * random())
 
 def prettizer( humandata ):
+    t = ''
     for item in humandata:
-        t += item
+        t += item + '\n'
     return t
 
 def humanizer(NUM):

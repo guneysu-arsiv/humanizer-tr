@@ -20,3 +20,5 @@ Sayıları İnsanların Okuyabileceği Hale Getirir
 751
 
 ```
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/guneysus/humanizer-tr/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
